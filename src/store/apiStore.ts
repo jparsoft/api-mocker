@@ -35,7 +35,7 @@ export const useApiStore = create<ApiState>()(
           id: crypto.randomUUID(),
           createdAt: timestamp,
           lastModified: timestamp,
-          endpoints: [],
+          endpoints: collection.endpoints.length > 0 ? collection.endpoints : [],
         };
 
         set((state) => ({

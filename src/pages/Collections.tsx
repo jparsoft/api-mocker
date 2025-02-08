@@ -4,7 +4,6 @@ import { Plus, Download, Upload, Pencil, Trash2, Search, SortAsc, SortDesc } fro
 import { useApiStore } from '../store/apiStore';
 import { Button } from '../components/atoms/Button';
 import { toast } from 'sonner';
-import { ApiCollection } from '../types/api';
 import { PostmanParser } from '../utils/postmanParser';
 import { ApiDiscoveryDialog } from '../components/molecules/ApiDiscoveryDialog';
 import { useLanguage } from '../contexts/LanguageContext';

@@ -25,7 +25,7 @@ export interface ChangeHistoryEntry {
   id: string;
   timestamp: number;
   type: 'collection' | 'endpoint';
-  action: 'create' | 'update' | 'delete' | 'duplicate';
+  action: 'create' | 'update' | 'delete' | 'duplicate' | 'import';
   itemId: string;
   collectionId: string;
   changes: {
