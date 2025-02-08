@@ -1,6 +1,6 @@
 export const es = {
   // Navigation
-  'app.title': 'API Mocker',
+  'app.title': 'API Mock and Discover',
   'nav.collections': 'Colecciones',
   'nav.endpoints': 'Endpoints',
   'nav.switchLanguage': 'Cambiar idioma',

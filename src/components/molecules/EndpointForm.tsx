@@ -121,7 +121,7 @@ export const EndpointForm: React.FC<EndpointFormProps> = ({
 
       <div className="flex justify-end space-x-4">
         <Button variant="secondary" onClick={onCancel}>
-          {t('common.cancel')}
+          {t('action.cancel')}
         </Button>
         <Button type="submit">
           {endpoint ? t('endpoints.update') : t('endpoints.create')}

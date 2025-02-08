@@ -1,13 +1,13 @@
-import React from 'react';
-import { X } from 'lucide-react';
-import { ApiEndpoint } from '../../types/api';
-import { EndpointForm } from '../molecules/EndpointForm';
-
+import React from "react";
+import { X } from "lucide-react";
+import { ApiEndpoint } from "../../types/api";
+import { EndpointForm } from "../molecules/EndpointForm";
+import { useLanguage } from "../../contexts/LanguageContext";
 interface EndpointDialogProps {
   isOpen: boolean;
   endpoint?: ApiEndpoint;
   onClose: () => void;
-  onSubmit: (data: Omit<ApiEndpoint, 'id' | 'createdAt'>) => void;
+  onSubmit: (data: Omit<ApiEndpoint, "id" | "createdAt">) => void;
 }
 
 export const EndpointDialog: React.FC<EndpointDialogProps> = ({
@@ -16,6 +16,7 @@ export const EndpointDialog: React.FC<EndpointDialogProps> = ({
   onClose,
   onSubmit,
 }) => {
+  const { t } = useLanguage();
   if (!isOpen) return null;
 
   return (
@@ -37,7 +38,7 @@ export const EndpointDialog: React.FC<EndpointDialogProps> = ({
           <div className="sm:flex sm:items-start">
             <div className="mt-3 w-full text-center sm:mt-0 sm:text-left">
               <h3 className="text-lg font-medium leading-6 text-gray-900">
-                {endpoint ? 'Edit Endpoint' : 'Create New Endpoint'}
+                {endpoint ? t("endpoints.update") : t("endpoints.create")}
               </h3>
               <div className="mt-6">
                 <EndpointForm
